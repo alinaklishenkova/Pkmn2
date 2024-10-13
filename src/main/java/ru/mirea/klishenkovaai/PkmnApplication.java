@@ -12,20 +12,16 @@ public class PkmnApplication {
         Card card = cardImport.card;
         if (card != null) {
 
-            // Сохранение карты в файл
             CardExport cardExport = new CardExport();
             cardExport.saveCard(card);
 
-            // Загрузка другой карты
             System.out.print("Введите путь к файлу карты для загрузки (.crd): ");
             String filePath = scanner.nextLine();
             Card loadedCard = cardImport.loadCardFromFile(filePath);
 
             if (loadedCard != null) {
                 System.out.println("Загруженная карта: ");
-                //вывод при загруженная карта
 
-                // Вывод информации о загруженной карточке
                 System.out.println("Имя покемона: " + card.getName());
                 System.out.println("Этап покемона: " + card.getPokemonStage());
                 System.out.println("HP: " + card.getHp());
@@ -36,7 +32,6 @@ public class PkmnApplication {
                     System.out.println("- " + attack.getName() + " (Стоимость: " + attack.getCost() + ", Урон: " + attack.getDamage() + ")");
                 }
 
-                // Дополнительная информация
                 if (card.getEvolvesFrom() != null) {
                     System.out.println("Эволюционирует из: " + card.getEvolvesFrom().getName());
                 }
@@ -50,7 +45,6 @@ public class PkmnApplication {
                 System.out.println("Набор игры: " + card.getGameSet());
                 System.out.println("Регуляторная метка: " + card.getRegulationMark());
                 System.out.println("Владелец покемона: " + card.getPokemonOwner().getName());
-                //окончание вывода
             } else {
                 System.out.println("Не удалось загрузить карту.");
             }
