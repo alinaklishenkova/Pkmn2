@@ -1,0 +1,12 @@
+BASIC
+Rillaboom
+220
+GRASS
+-
+2G / DrainPunch / 60,3G / DrumRush / 160
+FIRE
+-
+2
+Sword  Shield
+E
+Клишенкова / Алина / Игоревна / БСБО-06-23
